@@ -1,0 +1,17 @@
+Sorted by id number: 
+199922007
+199922006
+199922004
+199922007
+200722013
+200822013
+200922015
+Sorted by last name: 
+Cregg
+Dunham
+Knope
+Knope
+Lyman
+Seaborn
+Ziegler
+The number of unique majors is: 6

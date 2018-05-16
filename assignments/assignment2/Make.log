@@ -1,0 +1,10 @@
+g++ -c pizza.cpp
+pizza.cpp: In function ‘void input_ingredients(int, std::string)’:
+pizza.cpp:54:2: error: ‘ingredients’ was not declared in this scope
+  ingredients[index] = ingredient;
+  ^
+pizza.cpp: In member function ‘void Pizza::fill_ingredients_array(std::string*, int)’:
+pizza.cpp:59:20: error: ‘temp’ was not declared in this scope
+   ingredients[i] = temp[i];
+                    ^
+make: *** [pizza.o] Error 1
