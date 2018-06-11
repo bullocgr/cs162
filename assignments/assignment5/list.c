@@ -2,33 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
-int main () {
-	char ans[2];
-	int num;
-	struct node *head = NULL;
-	do {
-		do {
-			printf("Enter a number: ");
-			scanf("%d", &num);
-			head = push(head, num);//Can change to append
-			printf("Do you want another num (y or n): ");
-			scanf("%1s", ans);
-		} while (ans[0] == 'y');
-		printf("Sort ascending or descending (a or d)? ");
-		scanf("%1s", ans);
-		if (ans[0] == 'a')
-			head = sort_ascending(head);
-		else if (ans[0] == 'd')
-			head = sort_descending(head);
-		print(head, length(head));
-		printf("Do you want to do this again (y or n)? ");
-		scanf("%1s", ans);
-		head = clear(head);
-	} while (ans[0] == 'y');
-	return 0;
-}
-
 /*Function: length
 Description: this will count how long the list is and return that number
 Parameters: read in the list and return the length
@@ -158,7 +131,7 @@ struct node* sort_ascending(struct node* head) {
 			previous = current1->next;
 			while (previous->next != NULL) {
 				if (previous->val > previous->next->val) {
-					current1 = swap(previous, previous->next);
+					current->next = swap(previous, previous->next);
 					unsorted = 1;
 				}
 				current = previous;
@@ -222,10 +195,10 @@ struct node* insert_middle(struct node* head, int num, int index) {
 	struct node* temp;
 	struct node* new_node = malloc(sizeof(struct node));
 	new_node->val = num;
-	if(index == 0) {
+	if (index == 0) {
 		head = push(head, num);
 	}
-	for (int i = 0; i < index - 1; i++) {
+	for (i = 0; i < index - 1; i++) {
 		if (i == index) {
 			current = current->next;
 		}
