@@ -79,7 +79,7 @@ void get_state_data(state * state_arr, int num, fstream & file) {
 		// cout << state_arr[i]. name_state << endl;
 		file >> state_arr[i].population_state;
 		// cout << state_arr[i].population_state << endl;
-		file >> state_arr[i].counties;
+		file >> state_arr[i].   counties;
 		// cout << state_arr[i].counties << endl;
 		state_arr[i].c = create_counties(state_arr[i].counties); //at the index we create a new array of shit that holds the county data
 		get_county_data(state_arr[i].c, state_arr[i].counties, file); //this one fills the array with the data

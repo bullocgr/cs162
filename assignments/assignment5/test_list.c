@@ -225,7 +225,7 @@ struct node* insert_middle(struct node* head, int num, int index) {
 	if(index == 0) {
 		head = push(head, num);
 	}
-	for (int i = 0; i < index - 1; i++) {
+	for (i = 0; i < index - 1; i++) {
 		if (i == index) {
 			current = current->next;
 		}
